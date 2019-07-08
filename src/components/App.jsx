@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from './Header';
+import KombuchaList from './KombuchaList';
 
 function App(){
   return(
     <div>
-      <p>Initialization of reqact project review</p>
+      <Header/>
+      <KombuchaList/>
     </div>
   );
 }
