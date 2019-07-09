@@ -5,8 +5,9 @@ function Employee(){
   return(
     <div>
       <p>Employee Component</p>
-      <Link to="/form">Add a Kombucha</Link>
-      <Link to="/pints">Pints</Link>
+      
+      <Link to="/form">Add a Kombucha</Link><br></br>
+      <Link to="/pints">Pints</Link><br></br>
       <Link to="/edit">Edit</Link>
     </div>
   );

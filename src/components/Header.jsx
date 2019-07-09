@@ -23,7 +23,7 @@ function Header(){
     </style>
       <div className="header">
         <h1>SK Kombucha Bar</h1>
-          <Link to="/">Home</Link> | <Link to="/patron">Patron</Link> | <Link to="/employee">employee</Link>
+          <Link to="/">Home</Link> | <Link to="/patron">Patron</Link> | <Link to="/employee">Employee</Link>
       </div>
     </div>
 
