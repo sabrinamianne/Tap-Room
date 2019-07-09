@@ -5,7 +5,7 @@ function Header(){
   return(
     <div>
     <style jsx> {`
-      div {
+      .header {
         background-color: orange;
         margin-bottom: 2%;
       }
@@ -21,10 +21,12 @@ function Header(){
       }
     `}
     </style>
-      <h1>SK Kombucha Bar</h1>
-      <Link to="/patron">Patron</Link> | <Link to="/employee">employee</Link>
+      <div className="header">
+        <h1>SK Kombucha Bar</h1>
+          <Link to="/">Home</Link> | <Link to="/patron">Patron</Link> | <Link to="/employee">employee</Link>
+      </div>
+    </div>
 
-  </div>
   );
 }
 
