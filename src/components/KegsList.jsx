@@ -1,14 +1,14 @@
 import React from 'react';
-import Kombucha from './Kombucha';
+import KegsDetails from './KegsDetails';
 
 
-function KombuchaList(){
+function KegsList(){
   return (
     <div>
-      <Kombucha/>
+      <KegsDetails/>
       <h1>Kombucha List component parent of Kombucha</h1>
     </div>
   );
 }
 
-export default KombuchaList;
+export default KegsList;

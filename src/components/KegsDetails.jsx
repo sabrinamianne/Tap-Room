@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Kombucha(){
+function KegsDetails(){
   return (
     <div>
       <h1>Kombucha Component child</h1>
@@ -8,4 +8,4 @@ function Kombucha(){
   );
 }
 
-export default Kombucha;
+export default KegsDetails;
