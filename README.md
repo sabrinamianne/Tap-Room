@@ -6,7 +6,7 @@
 
 
 
-![alt text](https://github.com/sabrinamianne/Tap-Room/blob/master/src/assets/img/TreeComponent.png)
+![alt text](https://github.com/sabrinamianne/Tap-Room/blob/master/src/assets/img/TreeComponent%20.png)
 
 ## Description
 
