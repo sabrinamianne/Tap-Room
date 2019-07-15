@@ -1,13 +1,13 @@
 import React from 'react';
 import Kombucha from './Kombucha';
-import {Link} from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 
 
 function KombuchaList(props){
   return (
     <div>
-       <div >
+
         {Object.keys(props.kombuchaList).map(function(kombuchaId) {
           var kombucha = props.kombuchaList[kombuchaId]
           return <Kombucha
@@ -20,7 +20,7 @@ function KombuchaList(props){
           kombuchaId ={kombuchaId}
           onKombuchaSelection ={props.onKombuchaSelection}/>
         })}
-       </div>
+
     </div>
   );
 }

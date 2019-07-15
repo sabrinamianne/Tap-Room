@@ -24,18 +24,27 @@ function Kombucha(props){
     </style>
   </div>
 
+  if (props.currentRouterPath === '/employee'){
   return (
-    <div className="kombucha">{kombuchaInformation}</div>
-
-  )
+    <div className="kombucha" onClick={() => {props.onKombuchaSelection(props.kombuchaId);}}>{kombuchaInformation}</div>
+  );
+} else {
+  return (
+    <div className="kombucha">
+      {kombuchaInformation}
+    </div>
+    );
+  }
 }
-
 
 Kombucha.propTypes = {
   brandKombucha: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  flavor: PropTypes.string.isRequired,
-  amountBottle: PropTypes.number.isRequired
+  flavorKombucha: PropTypes.string.isRequired,
+  amountBottle: PropTypes.number.isRequired,
+  currentRouterPath: PropTypes.string,
+  onKombuchaSelection: PropTypes.func,
+  kombuchaId: PropTypes.string.isRequired
 }
 
 export default Kombucha;

@@ -20,43 +20,43 @@ class App extends React.Component {
       masterKombuchasList: [
         {
           brandKombucha: 'Kombucha Seattle',
-          amountBottle: 2000,
+          amountBottle: 200,
           price: 4,
           flavorKombucha: 'Strawberry'
         },
         {
           brandKombucha: 'KombuTya',
-          amountBottle: 5100,
+          amountBottle: 500,
           price: 7,
           flavorKombucha: 'WaterMelon'
         },
         {
           brandKombucha: 'Kombucha Seattle',
-          amountBottle: 6300,
+          amountBottle: 600,
           price: 4,
           flavorKombucha: 'Cherry'
         },
         {
           brandKombucha: 'Kagy',
-          amountBottle: 1000,
+          amountBottle: 100,
           price: 5,
           flavorKombucha: 'Lemon'
         },
         {
           brandKombucha: 'Kagy',
-          amountBottle: 1000,
+          amountBottle: 100,
           price: 5,
           flavorKombucha: 'Blueberry'
         },
         {
           brandKombucha: 'Lany Kombucha',
-          amountBottle: 2000,
+          amountBottle: 200,
           price: 11,
           flavorKombucha: 'Chocolate'
         },
         {
           brandKombucha: 'Poulya Koff',
-          amountBottle: 3000,
+          amountBottle: 300,
           price: 8,
           flavorKombucha: 'Cherry Lemon'
         },
