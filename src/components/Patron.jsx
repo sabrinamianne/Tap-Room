@@ -5,7 +5,7 @@ function Patron(){
   return(
 
     <div>
-      <p>Patron Component</p>
+      <p>Patron: Sabrina</p>
       <Link to="/kombuchalist">Kombucha List</Link><br></br>
         <Link to="/bottle">Bottle</Link>
     </div>

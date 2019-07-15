@@ -17,7 +17,68 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKombuchasList: {},
+      masterKombuchasList: [
+        {
+          brandKombucha: 'Kombucha Seattle',
+          amountBottle: 2000,
+          price: 4,
+          flavorKombucha: 'Strawberry'
+        },
+        {
+          brandKombucha: 'KombuTya',
+          amountBottle: 5100,
+          price: 7,
+          flavorKombucha: 'WaterMelon'
+        },
+        {
+          brandKombucha: 'Kombucha Seattle',
+          amountBottle: 6300,
+          price: 4,
+          flavorKombucha: 'Cherry'
+        },
+        {
+          brandKombucha: 'Kagy',
+          amountBottle: 1000,
+          price: 5,
+          flavorKombucha: 'Lemon'
+        },
+        {
+          brandKombucha: 'Kagy',
+          amountBottle: 1000,
+          price: 5,
+          flavorKombucha: 'Blueberry'
+        },
+        {
+          brandKombucha: 'Lany Kombucha',
+          amountBottle: 2000,
+          price: 11,
+          flavorKombucha: 'Chocolate'
+        },
+        {
+          brandKombucha: 'Poulya Koff',
+          amountBottle: 3000,
+          price: 8,
+          flavorKombucha: 'Cherry Lemon'
+        },
+        {
+          brandKombucha: 'Koly',
+          amountBottle: 500,
+          price: 6,
+          flavorKombucha: 'Ginger'
+        },
+        {
+          brandKombucha: 'Kagy',
+          amountBottle: 300,
+          price: 5,
+          flavorKombucha: 'Cola'
+        },
+        {
+          brandKombucha: 'Kagy',
+          amountBottle: 300,
+          price: 6,
+          flavorKombucha: 'Kiwi'
+        }
+      ],
       selectedKombucha: null
     };
 

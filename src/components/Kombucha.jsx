@@ -5,12 +5,28 @@ function Kombucha(props){
   const kombuchaInformation =
   <div>
     <h3>{props.brandKombucha}</h3>
-    <h4>Price: {props.price} | Flavor: {props.flavor}</h4>
+    <h4>Price: ${props.price}</h4>
+    <h4>Flavor: {props.flavorKombucha}</h4>
     <h4>Numbers of Bottle: {props.amountBottle}</h4>
+    <style jsx> {`
+      .kombucha {
+        border: 1px solid #ffc96b;
+        background-color: #ffc96b;
+        width: 11em;
+        margin: 5px;
+        float: left;
+        margin-left:5px;
+        padding: 3px;
+        margin-top:2%;
+      }
+
+    `}
+    </style>
   </div>
 
   return (
-    <div>{kombuchaInformation}</div>
+    <div className="kombucha">{kombuchaInformation}</div>
+
   )
 }
 

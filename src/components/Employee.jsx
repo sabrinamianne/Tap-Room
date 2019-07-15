@@ -10,7 +10,11 @@ function Employee(props){
   }
   return(
     <div>
-      <p>Employee Component</p>
+      <p>Employee: <strong>Jessica</strong></p>
+        <Link to="/form">Add a Kombucha</Link><br></br>
+        <Link to="/Bottles">Bottles</Link><br></br>
+        <Link to="/edit">Edit</Link>
+        
       {optionalSelectedKombucha}
       <KombuchaList
         kombuchaList={props.kombuchaList}
@@ -18,9 +22,7 @@ function Employee(props){
         onKombuchaSelection={props.onKombuchaSelection}/>
 
 
-      <Link to="/form">Add a Kombucha</Link><br></br>
-      <Link to="/pints">Pints</Link><br></br>
-      <Link to="/edit">Edit</Link>
+
     </div>
   );
 }

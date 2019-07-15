@@ -8,7 +8,7 @@ function KombuchaDetails(props){
     <div>
       <h1>{props.selectedKombucha.brandKombucha} - {props.selectedKombucha.flavorKombucha}</h1>
       <h2>{props.selectedKombucha.price}- {props.selectedKombucha.amountKombucha}</h2>
-      <Link to='/kegslist'>Return to the List</Link>
+      <Link to='/kombuchalist'>Return to the List</Link>
     </div>
   );
 }

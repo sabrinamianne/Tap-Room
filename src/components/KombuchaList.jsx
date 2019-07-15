@@ -7,18 +7,20 @@ import PropTypes from 'prop-types';
 function KombuchaList(props){
   return (
     <div>
-      {Object.keys(props.kombuchaList).map(function(kombuchaId) {
-        var kombucha = props.kombuchaList[kombuchaId]
-        return <Kombucha
-        brandKombucha = {kombucha.brandKombucha}
-        price = {kombucha.price}
-        amountBottle = {kombucha.amountBottle}
-        flavorKombucha = {kombucha.flavorKombucha}
-        currentRouterPath={props.currentRouterPath}
-        key = {kombuchaId}
-        kombuchaId ={kombuchaId}
-        onKombuchaSelection ={props.onKombuchaSelection}/>
-      })}
+       <div >
+        {Object.keys(props.kombuchaList).map(function(kombuchaId) {
+          var kombucha = props.kombuchaList[kombuchaId]
+          return <Kombucha
+          brandKombucha = {kombucha.brandKombucha}
+          price = {kombucha.price}
+          amountBottle = {kombucha.amountBottle}
+          flavorKombucha = {kombucha.flavorKombucha}
+          currentRouterPath={props.currentRouterPath}
+          key = {kombuchaId}
+          kombuchaId ={kombuchaId}
+          onKombuchaSelection ={props.onKombuchaSelection}/>
+        })}
+       </div>
     </div>
   );
 }
