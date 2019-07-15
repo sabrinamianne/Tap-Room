@@ -1,33 +1,53 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
-function Form() {
+function Form(props) {
+  let _brandKombucha = null;
+  let _price = null;
+  let _amountBottle = null;
+  let _flavorKombucha= null;
+
+  function handleNewKombuchaFormSubmission(event) {
+    event.preventDefault();
+    props.onAddNewKombucha({brandKombucha: _brandKombucha.value, price: _price.value, amountBottle: _amountBottle.value, flavorKombucha: _flavorKombucha.value, id: v4()});
+    _brandKombucha.value = '';
+    _price.value = '';
+    _amountBottle.value ='';
+    _flavorKombucha.value = '';
+  }
+
   return(
     <div>
-      <form>
-        <input
-          type='text'
-          placeholder='Name'
-          id='nameKeg'/>
+      <form onSubmit={handleNewKombuchaFormSubmission}>
         <input
           type='text'
           placeholder='Brand '
-          id='brandKeg'/>
+          id='brandKombucha'
+          ref={(input) => { _brandKombucha= input;}}/>
         <input
           type='number'
-          placeholder='Price of a Pint'
-          id='price'/>
+          placeholder='Price'
+          id='price'
+          ref={(input) => { _price = input;}}/>
         <input
           type='number'
-          placeholder='Amount of Keg'
-          id='amountKeg'/>
+          placeholder='Amount of Bottle'
+          id='amountKombucha'
+          ref={(input) => { _amountBottle = input;}}/>
         <input
           type='text'
           placeholder='Flavor'
-          id='flavorKeg'/>
+          id='flavorKombucha'
+          ref={(input) => { _flavorKombucha= input;}}/>
         <button type="submit">Add</button>
       </form>
     </div>
   );
 }
+
+Form.propTypes = {
+  onAddNewKombucha: PropTypes.func
+};
 
 export default Form;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function Pints() {
+function Bottle() {
   return(
     <div>
       <Link to="/sell">Sell</Link>
@@ -9,4 +9,4 @@ function Pints() {
   );
 }
 
-export default Pints;
+export default Bottle;

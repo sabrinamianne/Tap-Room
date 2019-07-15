@@ -8,7 +8,7 @@ function Header(){
     <style jsx> {`
       .header {
         height:100px;
-        margin-bottom: 33%;
+        margin-bottom:50%;
       }
       h1 {
         text-align: center;
@@ -20,8 +20,9 @@ function Header(){
       margin-left:10%;
       margin-right:10%;
 
-
       }
+
+
 
     `}
     </style>
@@ -34,7 +35,8 @@ function Header(){
       <div className="header">
         <Link to="/">Home</Link> <br></br><br></br> <Link to="/patron">Patron</Link> | <Link to="/employee">Employee</Link>
         <img id="imgHeader" src={img}></img>
-        <h1>SK Kombucha Bar</h1>
+        <h1>Sk Kombucha Tap-Room</h1>
+
         <hr/>
       </div>
     </div>
