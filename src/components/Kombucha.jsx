@@ -7,7 +7,9 @@ function Kombucha(props){
     <h3>{props.brandKombucha}</h3>
     <h4>Price: ${props.price}</h4>
     <h4>Flavor: {props.flavorKombucha}</h4>
-    <h4>Numbers of Bottle: {props.amountBottle}</h4>
+    <h4>Numbers of Bottle: {props.amountKeg}</h4>
+      <button onClick={() =>props.sellPints(props.kombuchaId)}>Sell</button>
+      
     <style jsx> {`
       .kombucha {
         border: 1px solid #ffc96b;
@@ -30,10 +32,8 @@ function Kombucha(props){
   );
 } else {
   return (
-    <div className="kombucha">
-      {kombuchaInformation}
-    </div>
-    );
+    <div className="kombucha"></div>
+    )
   }
 }
 
@@ -41,10 +41,11 @@ Kombucha.propTypes = {
   brandKombucha: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   flavorKombucha: PropTypes.string.isRequired,
-  amountBottle: PropTypes.number.isRequired,
+  amountKeg: PropTypes.number.isRequired,
   currentRouterPath: PropTypes.string,
   onKombuchaSelection: PropTypes.func,
-  kombuchaId: PropTypes.string.isRequired
+  kombuchaId: PropTypes.string.isRequired,
+  sellPints: PropTypes.func
 }
 
 export default Kombucha;

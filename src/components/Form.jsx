@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import {withRouter} from 'react-router';
 
 function Form(props) {
   let _brandKombucha = null;
   let _price = null;
-  let _amountBottle = null;
+  let _amountKeg = null;
   let _flavorKombucha= null;
 
   function handleNewKombuchaFormSubmission(event) {
     event.preventDefault();
-    props.onAddNewKombucha({brandKombucha: _brandKombucha.value, price: _price.value, amountBottle: _amountBottle.value, flavorKombucha: _flavorKombucha.value, id: v4()});
+    props.onAddNewKombucha({brandKombucha: _brandKombucha.value, price: _price.value, amountKeg: _amountKeg.value, flavorKombucha: _flavorKombucha.value, id: v4()});
     _brandKombucha.value = '';
     _price.value = '';
-    _amountBottle.value ='';
+    _amountKeg.value ='';
     _flavorKombucha.value = '';
+    props.history.push('/employee');
   }
 
   return(
@@ -32,9 +34,9 @@ function Form(props) {
           ref={(input) => { _price = input;}}/>
         <input
           type='number'
-          placeholder='Amount of Bottle'
-          id='amountKombucha'
-          ref={(input) => { _amountBottle = input;}}/>
+          placeholder='Amount of keg'
+          id='amountKeg'
+          ref={(input) => { _amountKeg = input;}}/>
         <input
           type='text'
           placeholder='Flavor'
@@ -50,4 +52,4 @@ Form.propTypes = {
   onAddNewKombucha: PropTypes.func
 };
 
-export default Form;
+export default withRouter(Form);

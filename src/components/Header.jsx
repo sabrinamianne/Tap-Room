@@ -15,8 +15,10 @@ function Header(){
       }
 
       #imgHeader {
-      width:100%;
+      width:90%;
       height: 30em;
+      margin-left:5%;
+      margin-right:5%;
       margin-top:1%;
       }
 

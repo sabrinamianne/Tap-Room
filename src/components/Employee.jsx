@@ -11,16 +11,33 @@ function Employee(props){
   }
   return(
     <div>
-      <p>Employee: <strong>Jessica</strong></p>
-        <Link to="/form">Add a Kombucha</Link><br></br>
-        <Link to="/Bottles">Bottles</Link><br></br>
-        <Link to="/edit">Edit</Link>
+      <style jsx> {`
+        .employee{
+          margin-bottom:2%;
+          position:relative;
+          background-color:white;
 
-      {optionalSelectedKombucha}
-      <KombuchaList
-        kombuchaList={props.kombuchaList}
-        currentRouterPath={props.currentRouterPath}
-        onKombuchaSelection={props.onKombuchaSelection}/>
+        }
+        .listEmployee{
+          position:relative;
+          margin-bottom: 90px;
+
+        }
+
+      `}
+      </style>
+      <div className="employee">
+        <p>Employee: <strong>Jessica</strong></p>
+          <Link to="/form">Add a Kombucha</Link><br></br>
+      </div>
+      <div className="listEmployee">
+        {optionalSelectedKombucha}
+        <KombuchaList
+          kombuchaList={props.kombuchaList}
+          currentRouterPath={props.currentRouterPath}
+          sellPints={props.sellPints}
+          onKombuchaSelection={props.onKombuchaSelection}/>
+      </div>
     </div>
   );
 }
@@ -30,7 +47,8 @@ Employee.propTypes = {
   kombuchaList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
   onKombuchaSelection: PropTypes.func.IsRequired,
-  selectedKombucha: PropTypes.string
+  sellPints: PropTypes.func,
+  selectedKombucha: PropTypes.object
 };
 
 
