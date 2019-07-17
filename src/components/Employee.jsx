@@ -30,6 +30,7 @@ function Employee(props){
       <div className="employee">
         <p>Employee: <strong>Jessica</strong></p>
           <Link to="/form">Add a Kombucha</Link><br></br>
+          <Link to="/">Sign out</Link>
       </div>
       <div className="listEmployee">
         {optionalSelectedKombucha}

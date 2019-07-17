@@ -17,61 +17,61 @@ class App extends React.Component {
       masterKombuchasList: [
         {
           brandKombucha: 'Kombucha Seattle',
-          amountKeg: 20,
+          amountBottle: 20,
           price: 4,
           flavorKombucha: 'Strawberry'
         },
         {
           brandKombucha: 'KombuTya',
-          amountKeg: 50,
+          amountBottle: 50,
           price: 7,
           flavorKombucha: 'WaterMelon'
         },
         {
           brandKombucha: 'Kombucha Seattle',
-          amountKeg: 60,
+          amountBottle: 60,
           price: 4,
           flavorKombucha: 'Cherry'
         },
         {
           brandKombucha: 'Kagy',
-          amountKeg: 10,
+          amountBottle: 10,
           price: 5,
           flavorKombucha: 'Lemon'
         },
         {
           brandKombucha: 'Kagy',
-          amountKeg: 10,
+          amountBottle: 10,
           price: 5,
           flavorKombucha: 'Blueberry'
         },
         {
           brandKombucha: 'Lany Kombucha',
-          amountKeg: 20,
+          amountBottle: 20,
           price: 11,
           flavorKombucha: 'Chocolate'
         },
         {
           brandKombucha: 'Poulya Koff',
-          amountKeg: 30,
+          amountBottle: 30,
           price: 8,
           flavorKombucha: 'Cherry Lemon'
         },
         {
           brandKombucha: 'Koly',
-          amountKeg: 50,
+          amountBottle: 50,
           price: 6,
           flavorKombucha: 'Ginger'
         },
         {
           brandKombucha: 'Kagy',
-          amountKeg: 30,
+          amountBottle: 30,
           price: 5,
           flavorKombucha: 'Cola'
         },
         {
           brandKombucha: 'Kagy',
-          amountKeg: 30,
+          amountBottle: 30,
           price: 6,
           flavorKombucha: 'Kiwi'
         }
@@ -98,7 +98,7 @@ class App extends React.Component {
 
   sellBottle(kombuchaId) {
     const newMasterKombuchasList = [...this.state.masterKombuchasList];
-    newMasterKombuchasList[kombuchaId].amountKeg --;
+    newMasterKombuchasList[kombuchaId].amountBottle --;
     this.setState({masterKombuchasList: newMasterKombuchasList});
   }
 

@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import {withRouter} from 'react-router';
 import Employee from './Employee';
-
+import {Link} from 'react-router-dom'
 
 function Form(props) {
   let _brandKombucha = null;
   let _price = null;
-  let _amountKeg = null;
+  let _amountBottle = null;
   let _flavorKombucha= null;
 
 
   function handleNewKombuchaFormSubmission(event) {
     event.preventDefault();
-    props.onAddNewKombucha({brandKombucha: _brandKombucha.value, price: _price.value, amountKeg: _amountKeg.value, flavorKombucha: _flavorKombucha.value, id: v4()});
+    props.onAddNewKombucha({brandKombucha: _brandKombucha.value, price: _price.value, amountBottle: _amountBottle.value, flavorKombucha: _flavorKombucha.value, id: v4()});
     _brandKombucha.value = '';
     _price.value = '';
-    _amountKeg.value ='';
+    _amountBottle.value ='';
     _flavorKombucha.value = '';
     props.history.push('/employee');
   }
@@ -47,6 +47,17 @@ function Form(props) {
           height: 3em;
         }
 
+        #link {
+          border: 1px solid black;
+          color:black;
+          font-weight: bold;
+          background-color:orange;
+        }
+
+        #link:link {
+          text-decoration: none;
+        }
+
       `}
       </style>
       <div className="form">
@@ -65,15 +76,16 @@ function Form(props) {
           <input
             type='number'
             placeholder='Amount of keg'
-            id='amountKeg'
-            ref={(input) => { _amountKeg = input;}}/>
+            id='amountBottle'
+            ref={(input) => { _amountBottle = input;}}/>
           <input
             type='text'
             placeholder='Flavor'
             id='flavorKombucha'
             ref={(input) => { _flavorKombucha= input;}}/>
           <button id="button" type="submit">Add</button>
-        </form>
+        </form><br></br>
+      <Link to="/employee" id="link">Employee page</Link>
       </div>
     </div>
   );

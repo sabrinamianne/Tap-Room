@@ -9,7 +9,6 @@ function Patron(props){
   if (props.selectedKombucha != null){
     optionalSelectedKombucha = <KombuchaDetails selectedKombucha={props.kombuchaList[props.selectedKombucha]}/>;
   }
-
   return(
     <div>
       <style jsx> {`
@@ -25,13 +24,13 @@ function Patron(props){
           top:100em;
           position:static;
         }
-
       `}
       </style>
       <div className="employee">
         <p>Manager: <strong>Sabrina</strong></p>
         <p>Current CA: $30000</p>
-        <p>Employees: 10</p>
+        <p>Employees: 10 </p>
+        <Link to="/">Sign out</Link>
       </div>
       <div className="listEmployee">
         {optionalSelectedKombucha}

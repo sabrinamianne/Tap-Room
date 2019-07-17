@@ -19,7 +19,7 @@ function KombuchaList(props){
           return <Kombucha
           brandKombucha = {kombucha.brandKombucha}
           price = {kombucha.price}
-          amountKeg = {kombucha.amountKeg}
+          amountBottle = {kombucha.amountBottle}
           flavorKombucha = {kombucha.flavorKombucha}
           currentRouterPath={props.currentRouterPath}
           sellBottle={props.sellBottle}
