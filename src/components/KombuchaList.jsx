@@ -22,7 +22,7 @@ function KombuchaList(props){
           amountKeg = {kombucha.amountKeg}
           flavorKombucha = {kombucha.flavorKombucha}
           currentRouterPath={props.currentRouterPath}
-          sellPints={props.sellPints}
+          sellBottle={props.sellBottle}
           key = {kombuchaId}
           kombuchaId ={kombuchaId}
           onKombuchaSelection ={props.onKombuchaSelection}/>
@@ -35,7 +35,7 @@ function KombuchaList(props){
 KombuchaList.propTypes = {
   kombuchaList: PropTypes.object,
   currentRouterPath: PropTypes.string,
-  sellPints: PropTypes.func,
+  sellBottle: PropTypes.func,
   onKombuchaSelection: PropTypes.func
 };
 

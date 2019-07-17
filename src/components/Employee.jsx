@@ -9,6 +9,7 @@ function Employee(props){
   if (props.selectedKombucha != null){
     optionalSelectedKombucha = <KombuchaDetails selectedKombucha={props.kombuchaList[props.selectedKombucha]}/>;
   }
+  
   return(
     <div>
       <style jsx> {`
@@ -19,8 +20,9 @@ function Employee(props){
 
         }
         .listEmployee{
-          position:relative;
+          position: sticky;
           margin-bottom: 90px;
+          margin-top:5em;
 
         }
 
@@ -35,7 +37,7 @@ function Employee(props){
         <KombuchaList
           kombuchaList={props.kombuchaList}
           currentRouterPath={props.currentRouterPath}
-          sellPints={props.sellPints}
+          sellBottle={props.sellBottle}
           onKombuchaSelection={props.onKombuchaSelection}/>
       </div>
     </div>
@@ -47,7 +49,10 @@ Employee.propTypes = {
   kombuchaList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
   onKombuchaSelection: PropTypes.func.IsRequired,
-  sellPints: PropTypes.func,
+  sellBottle: PropTypes.func,
+  kombuchaId: PropTypes.number,
+  kombuchasList: PropTypes.array,
+  onAddExistingKombucha: PropTypes.func,
   selectedKombucha: PropTypes.object
 };
 

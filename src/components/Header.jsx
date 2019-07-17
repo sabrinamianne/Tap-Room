@@ -9,6 +9,7 @@ function Header(){
       .header {
         height:100px;
         margin-bottom:32%;
+        position: sticky;
       }
       h1 {
         text-align: center;

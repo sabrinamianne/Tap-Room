@@ -82,7 +82,7 @@ class App extends React.Component {
 
     this.handleAddingNewKombuchaToList =  this.handleAddingNewKombuchaToList.bind(this);
     this.handleChangingSelectedKombucha = this.handleChangingSelectedKombucha.bind(this);
-    this.sellPints = this.sellPints.bind(this);
+    this.sellBottle = this.sellBottle.bind(this);
   }
 
   handleAddingNewKombuchaToList(newKombucha) {
@@ -97,12 +97,11 @@ class App extends React.Component {
     this.setState({selectedKombucha: kombuchaId});
   }
 
-  sellPints(kombuchaId) {
+  sellBottle(kombuchaId) {
     const newMasterKombuchasList = [...this.state.masterKombuchasList];
     newMasterKombuchasList[kombuchaId].amountKeg --;
     this.setState({masterKombuchasList: newMasterKombuchasList});
   }
-
 
 
   render(){
@@ -112,9 +111,9 @@ class App extends React.Component {
       <Switch>
           <Route  exact path='/' component={Home}/>
             <Route path='/patron' render={(props)=><Patron kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}/>} />
-          <Route path='/employee' render={(props)=><Employee kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}
+            <Route path='/employee' render={(props)=><Employee kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}
             onKombuchaSelection={this.handleChangingSelectedKombucha}
-            sellPints = {this.sellPints}
+            sellBottle = {this.sellBottle}
             selectedKombucha={this.state.selectedKombucha}/>} />
           <Route path='/kombuchalist' render={()=><KombuchaList kombuchaList={this.state.masterKombuchasList} />} />
           <Route path='/form' render={()=><Form onAddNewKombucha={this.handleAddingNewKombuchaToList} />} />

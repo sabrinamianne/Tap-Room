@@ -7,7 +7,7 @@ function Patron(){
     <div>
       <p>Patron: Sabrina</p>
       <Link to="/kombuchalist">Kombucha List</Link><br></br>
-        <Link to="/bottle">Bottle</Link>
+  
     </div>
   );
 }

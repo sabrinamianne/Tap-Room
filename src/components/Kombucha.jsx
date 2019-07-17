@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 function Kombucha(props){
   const kombuchaInformation =
@@ -8,8 +9,8 @@ function Kombucha(props){
     <h4>Price: ${props.price}</h4>
     <h4>Flavor: {props.flavorKombucha}</h4>
     <h4>Numbers of Bottle: {props.amountKeg}</h4>
-      <button onClick={() =>props.sellPints(props.kombuchaId)}>Sell</button>
-      
+    <button onClick={() =>props.sellBottle(props.kombuchaId)}>Sell</button>
+    
     <style jsx> {`
       .kombucha {
         border: 1px solid #ffc96b;
@@ -44,8 +45,8 @@ Kombucha.propTypes = {
   amountKeg: PropTypes.number.isRequired,
   currentRouterPath: PropTypes.string,
   onKombuchaSelection: PropTypes.func,
-  kombuchaId: PropTypes.string.isRequired,
-  sellPints: PropTypes.func
+  kombuchaId: PropTypes.number.isRequired,
+  sellBottle: PropTypes.func
 }
 
 export default Kombucha;
