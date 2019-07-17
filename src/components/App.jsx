@@ -9,7 +9,6 @@ import Form from './Form';
 import { v4 } from 'uuid';
 
 
-
 class App extends React.Component {
 
   constructor(props) {
@@ -110,7 +109,10 @@ class App extends React.Component {
       <Header/>
       <Switch>
           <Route  exact path='/' component={Home}/>
-            <Route path='/patron' render={(props)=><Patron kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}/>} />
+            <Route path='/patron' render={(props)=><Patron kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}
+            onKombuchaSelection={this.handleChangingSelectedKombucha}
+            sellBottle = {this.sellBottle}
+            selectedKombucha={this.state.selectedKombucha}/>} />
             <Route path='/employee' render={(props)=><Employee kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}
             onKombuchaSelection={this.handleChangingSelectedKombucha}
             sellBottle = {this.sellBottle}

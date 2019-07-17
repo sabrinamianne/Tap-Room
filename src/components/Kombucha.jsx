@@ -10,7 +10,7 @@ function Kombucha(props){
     <h4>Flavor: {props.flavorKombucha}</h4>
     <h4>Numbers of Bottle: {props.amountKeg}</h4>
     <button onClick={() =>props.sellBottle(props.kombuchaId)}>Sell</button>
-    
+
     <style jsx> {`
       .kombucha {
         border: 1px solid #ffc96b;
@@ -27,7 +27,7 @@ function Kombucha(props){
     </style>
   </div>
 
-  if (props.currentRouterPath === '/employee'){
+  if (props.currentRouterPath === '/employee' || props.currentRouterPath === '/patron'){
   return (
     <div className="kombucha" onClick={() => {props.onKombuchaSelection(props.kombuchaId);}}>{kombuchaInformation}</div>
   );

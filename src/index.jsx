@@ -4,6 +4,7 @@ import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 
+
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
@@ -12,6 +13,7 @@ const render = (Component) => {
       </HashRouter>
     </AppContainer>,
     document.getElementById('react-app-root')
+
   );
 };
 

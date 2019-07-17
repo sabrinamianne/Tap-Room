@@ -9,21 +9,20 @@ function Employee(props){
   if (props.selectedKombucha != null){
     optionalSelectedKombucha = <KombuchaDetails selectedKombucha={props.kombuchaList[props.selectedKombucha]}/>;
   }
-  
+
   return(
     <div>
       <style jsx> {`
         .employee{
-          margin-bottom:2%;
-          position:relative;
+          position:sticky;
           background-color:white;
+          top: 200;
+          bottom:10em;
 
         }
         .listEmployee{
-          position: sticky;
-          margin-bottom: 90px;
-          margin-top:5em;
-
+          bottom: 300em;
+          top:40em;
         }
 
       `}

@@ -26,7 +26,8 @@ function Form(props) {
     <div>
       <style jsx> {`
         .form {
-          margin-top:35em;
+          bottom: 10em;
+          top: 200;
           margin-left:10em;
         }
 

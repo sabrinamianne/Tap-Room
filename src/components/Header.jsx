@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import img from '../assets/img/tap-room.jpg';
 
 function Header(){
@@ -32,7 +31,6 @@ function Header(){
     `}
     </style>
       <div className="header">
-        <Link to="/">Home</Link> | <Link to="/patron">Patron</Link> | <Link to="/employee">Employee</Link><br></br>
         <img id="imgHeader" src={img}></img>
         <h1>Sk Kombucha Tap-Room</h1>
 
