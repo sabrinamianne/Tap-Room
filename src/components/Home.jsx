@@ -65,6 +65,15 @@ function Home(props) {
             border-radius: 50%;
           }
 
+          #buttonB {
+            background-color: black;
+            color: orange;
+            width:60px;
+            height: 35px;
+            margin-left:10px;
+            border-radius: 50%;
+          }
+
           `}
       </style>
       <div className="employeeSide">
@@ -90,7 +99,7 @@ function Home(props) {
               placeholder='Please enter your Password'
               id='passwordP'
               ref={(input) => { _passwordPatron = input;}}/>
-            <button id="buttonA" type="submit">Sign-in</button>
+            <button id="buttonB" type="submit">Sign-in</button>
           </form>
           </div>
     </div>

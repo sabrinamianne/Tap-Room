@@ -13,16 +13,16 @@ function Patron(props){
     <div>
       <style jsx> {`
         .employee{
-          position:static;
+          position:sticky;
           background-color:white;
-          top: 40em;
-          bottom:30em;
+          top: 30em;
+          bottom:5em;
         }
 
         .listEmployee{
           bottom: 400em;
-          top:100em;
-          position:static;
+          margin-top:10em;
+          position:sticky;
         }
       `}
       </style>

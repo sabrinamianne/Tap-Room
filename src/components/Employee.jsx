@@ -38,6 +38,7 @@ function Employee(props){
           kombuchaList={props.kombuchaList}
           currentRouterPath={props.currentRouterPath}
           sellBottle={props.sellBottle}
+          deleteKombucha={props.deleteKombucha}
           onKombuchaSelection={props.onKombuchaSelection}/>
       </div>
     </div>
@@ -50,6 +51,7 @@ Employee.propTypes = {
   currentRouterPath: PropTypes.string.isRequired,
   onKombuchaSelection: PropTypes.func.IsRequired,
   sellBottle: PropTypes.func,
+  deleteKombucha: PropTypes.func,
   kombuchaId: PropTypes.number,
   kombuchasList: PropTypes.array,
   onAddExistingKombucha: PropTypes.func,

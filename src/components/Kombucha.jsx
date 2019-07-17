@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
 function Kombucha(props){
+      console.log(props.kombuchaId)
   const kombuchaInformation =
   <div>
     <h3>{props.brandKombucha}</h3>
@@ -10,6 +11,7 @@ function Kombucha(props){
     <h4>Flavor: {props.flavorKombucha}</h4>
     <h4>Numbers of Bottle: {props.amountBottle}</h4>
     <button id="sell" onClick={() =>props.sellBottle(props.kombuchaId)}>Sell</button>
+    <button id="delete" onClick={() =>props.deleteKombucha(props.kombuchaId)}>Delete</button>
   </div>
 
 
@@ -30,6 +32,10 @@ function Kombucha(props){
 
         #sell{
           display: none;
+        }
+
+        #delete {
+         display: none;
         }
 
       `}
@@ -67,6 +73,7 @@ Kombucha.propTypes = {
   currentRouterPath: PropTypes.string,
   onKombuchaSelection: PropTypes.func,
   kombuchaId: PropTypes.number.isRequired,
+  deleteKombucha: PropTypes.func,
   sellBottle: PropTypes.func
 }
 

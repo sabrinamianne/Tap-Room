@@ -70,10 +70,46 @@ class App extends React.Component {
           flavorKombucha: 'Cola'
         },
         {
+        brandKombucha: 'Jiny Kombucha',
+        amountBottle: 20,
+        price: 9,
+        flavorKombucha: 'Passion'
+        },
+        {
+        brandKombucha: 'Seattle & Co',
+        amountBottle: 10,
+        price: 3,
+        flavorKombucha: 'Mint and Strawberry'
+        },
+        {
+        brandKombucha: 'St Patrick Kombucha',
+        amountBottle: 50,
+        price: 8,
+        flavorKombucha: 'Rasberry'
+        },
+        {
+        brandKombucha: 'Jiny Kombucha',
+        amountBottle: 20,
+        price: 9,
+        flavorKombucha: 'Banana Strawberry'
+        },
+        {
+        brandKombucha: 'Vanya',
+        amountBottle: 20,
+        price: 3,
+        flavorKombucha: 'Coconut'
+        },
+        {
+        brandKombucha: 'Peacefully',
+        amountBottle: 100,
+        price: 8,
+        flavorKombucha: 'Ginger Mint'
+        },
+        {
           brandKombucha: 'Kagy',
           amountBottle: 30,
           price: 6,
-          flavorKombucha: 'Kiwi'
+          flavorKombucha: 'Peach Ginger'
         }
       ],
       selectedKombucha: null,
@@ -82,6 +118,7 @@ class App extends React.Component {
     this.handleAddingNewKombuchaToList =  this.handleAddingNewKombuchaToList.bind(this);
     this.handleChangingSelectedKombucha = this.handleChangingSelectedKombucha.bind(this);
     this.sellBottle = this.sellBottle.bind(this);
+    this.deleteKombucha = this.deleteKombucha.bind(this);
   }
 
   handleAddingNewKombuchaToList(newKombucha) {
@@ -102,6 +139,11 @@ class App extends React.Component {
     this.setState({masterKombuchasList: newMasterKombuchasList});
   }
 
+  deleteKombucha(kombuchaId) {
+    const newMasterKombuchasList = [...this.state.masterKombuchasList];
+    newMasterKombuchasList.splice(kombuchaId,1);
+    this.setState({masterKombuchasList: newMasterKombuchasList});
+  }
 
   render(){
   return(
@@ -116,6 +158,7 @@ class App extends React.Component {
             <Route path='/employee' render={(props)=><Employee kombuchaList={this.state.masterKombuchasList} currentRouterPath={props.location.pathname}
             onKombuchaSelection={this.handleChangingSelectedKombucha}
             sellBottle = {this.sellBottle}
+            deleteKombucha = {this.deleteKombucha}
             selectedKombucha={this.state.selectedKombucha}/>} />
           <Route path='/kombuchalist' render={()=><KombuchaList kombuchaList={this.state.masterKombuchasList} />} />
           <Route path='/form' render={()=><Form onAddNewKombucha={this.handleAddingNewKombuchaToList} />} />

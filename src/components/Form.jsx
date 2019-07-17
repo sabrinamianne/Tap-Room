@@ -43,7 +43,7 @@ function Form(props) {
 
         #button {
           background-color: #ffecbd;
-          width:15em;
+          width:10em;
           height: 3em;
         }
 
@@ -75,7 +75,7 @@ function Form(props) {
             ref={(input) => { _price = input;}}/>
           <input
             type='number'
-            placeholder='Amount of keg'
+            placeholder='Amount of Bottle'
             id='amountBottle'
             ref={(input) => { _amountBottle = input;}}/>
           <input
